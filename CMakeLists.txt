@@ -16,7 +16,7 @@ set(CC_CLANG_FLAGS "-fno-threadsafe-statics -Oz -fno-stack-protector")
 if ("${CMAKE_CXX_COMPILER_ID}" MATCHES "(.*)Clang(.*)")
   # using Clang
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${CC_CLANG_FLAGS}")
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${CC_CLANG_FLAGS} -fvisibility-inlines-hidden")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${CC_CLANG_FLAGS} -fvisibility-inlines-hidden -fno-exceptions -fno-rtti")
   set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -dead_strip")
 
 elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
