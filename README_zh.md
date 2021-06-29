@@ -30,7 +30,7 @@
     - 生成一个新的项目，不会修改原始项目
     - 若要使用pch需要单独创建一个vcxproj来生成
   
-- CppBuildUnifier使用有什么条件呢
+## CppBuildUnifier使用有什么条件呢
   
   * 编译选项都是统一的，即没有为单个文件指定编译选项
   * 不适合编译单个文件就已经编译很慢的文件，这样的文件编译时可能占用太多内存从而减慢编译
@@ -40,3 +40,6 @@
 这个项目是好几年前写的了，原本是用来加速 cocos2dx 的编译，3.0版本的 cocos2dx 的粒子系统有很多文件，但是每个文件只有几行代码，导致编译很慢。
 在使用Unreal引擎时，Unreal会将多个 cpp 文件 include 到一个 cpp 中以减小编译时间，这个方法是可以通用的。
 
+## Dependency
+
+- [nom for android.mk parse](https://github.com/aep/nom)
