@@ -22,8 +22,6 @@
 #define namehash_h__
 #include <string>
 
-std::string encode(const char* path);
-
 uint32_t HashPath(const char* path, uint32_t seed);
 uint32_t HashString(const char* str, uint32_t seed);
 
