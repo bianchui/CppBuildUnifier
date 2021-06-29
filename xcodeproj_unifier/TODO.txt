@@ -1,0 +1,58 @@
+GUID
+    PBXGroup: {relative}, {name}, {0}
+    PBXFileReference: {relative}, {name}, {0}
+    PBXBuildFile: {relative}, {name}, {target}
+
+
+PBXGroup: mainGroup: add Group Reference to PBXGroup "@unified_build"
+    GUID_{mainGroup} = {
+        isa = PBXGroup;
+        children = (
+            GUID_PBXGroup_{@unified_build} /* @unified_build */, <-
+        );
+        sourceTree = "<group>";
+    };
+
+PBXGroup: add Group "@unified_build" ->
+    GUID_PBXGroup_{@unified_build} /* @unified_build */ = {
+        isa = PBXGroup;
+        children = (
+            GUID_PBXGroup_{target} /* {target} */,
+        );
+        path = "@unified_build";
+        sourceTree = "<group>";
+    };
+
+PBXGroup: add Group "{target}" ->
+    cleanup Group "{target}" ->
+        remove old GUID_PBXFileReference_{unified_file.s} /* {unified_file.s} */,
+    GUID_PBXGroup_{target} /* {target} */ = {
+        isa = PBXGroup;
+        children = (
+            GUID_PBXFileReference_{unified_file.s} /* {unified_file.s} */,
+        );
+        path = {target};
+        sourceTree = "<group>";
+    };
+
+
+PBXFileReference: add FileRef "{unified_file.s}" ->
+    GUID_PBXFileReference_{unified_file.s} /* {unified_file.s} */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.xxx; path = {unified_file.s}; sourceTree = "<group>"; };
+
+
+PBXSourcesBuildPhase: ->
+    cleanup BuildPhase ->
+        remove all old PBXBuildFile.s,
+    GUID_PBXSourcesBuildPhase_{target} /* Sources */ = {
+        isa = PBXSourcesBuildPhase;
+        buildActionMask = 2147483647;
+        files = (
+            GUID_PBXBuildFile_{unified_file.s} /* {unified_file.s} in Sources */,
+        );
+        runOnlyForDeploymentPostprocessing = 0;
+    };
+
+
+PBXBuildFile: add BuildFile "{unified_file.s}" ->
+    GUID_PBXBuildFile_{unified_file.s} /* {unified_file.s} in Sources */ = {isa = PBXBuildFile; fileRef = GUID_PBXFileReference_{unified_file.s} /* {unified_file.s} */; };
+

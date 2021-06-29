@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED3F4976202C538C000DA43A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED3F4975202C538C000DA43A /* main.cpp */; };
+		ED8783AB2045164800F28FC9 /* Android.mk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED8783A92045164800F28FC9 /* Android.mk.cpp */; };
+		ED8783AE2045474700F28FC9 /* lexer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED8783AC2045474700F28FC9 /* lexer.cpp */; };
+		ED96F220208EDAD00047E0D9 /* SSources.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED96F21C208ED1DA0047E0D9 /* SSources.cpp */; };
+		EDE7ED59268ADC1F00E0F437 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDE7ED4A268ADC1F00E0F437 /* main.cpp */; };
+		EDE7ED5A268ADC1F00E0F437 /* pbxproj_parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDE7ED51268ADC1F00E0F437 /* pbxproj_parser.cpp */; };
+		EDE7ED5B268ADC1F00E0F437 /* namehash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDE7ED52268ADC1F00E0F437 /* namehash.cpp */; };
+		EDE7ED5C268ADC1F00E0F437 /* NeXTSTEP_plist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDE7ED53268ADC1F00E0F437 /* NeXTSTEP_plist.cpp */; };
+		EDE7ED5D268ADC1F00E0F437 /* XcodeProjUnifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDE7ED54268ADC1F00E0F437 /* XcodeProjUnifier.cpp */; };
+		EDE7ED5E268ADC1F00E0F437 /* UnifiedXcodeProject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDE7ED58268ADC1F00E0F437 /* UnifiedXcodeProject.cpp */; };
+		EDE7ED5F268ADD4000E0F437 /* SSources.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED96F21C208ED1DA0047E0D9 /* SSources.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ED3F4972202C538C000DA43A /* android_mk_unifier */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = android_mk_unifier; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED3F4975202C538C000DA43A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		ED67918420411C3A00E5C127 /* Path.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Path.h; sourceTree = "<group>"; };
+		ED8783A92045164800F28FC9 /* Android.mk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Android.mk.cpp; sourceTree = "<group>"; };
+		ED8783AA2045164800F28FC9 /* Android.mk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Android.mk.h; sourceTree = "<group>"; };
+		ED8783AC2045474700F28FC9 /* lexer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lexer.cpp; sourceTree = "<group>"; };
+		ED8783AD2045474700F28FC9 /* lexer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lexer.hpp; sourceTree = "<group>"; };
+		ED8783B1204547AC00F28FC9 /* error.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = error.hpp; sourceTree = "<group>"; };
+		ED8783B2204547AC00F28FC9 /* utils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = utils.hpp; sourceTree = "<group>"; };
+		ED96F21C208ED1DA0047E0D9 /* SSources.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SSources.cpp; sourceTree = "<group>"; };
+		ED96F21D208ED1DA0047E0D9 /* SSources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSources.h; sourceTree = "<group>"; };
+		ED96F21E208ED35A0047E0D9 /* str_utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = str_utils.h; sourceTree = "<group>"; };
+		ED96F21F208ED36B0047E0D9 /* file_utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = file_utils.h; sourceTree = "<group>"; };
+		EDAA68B42043E23C0042A20D /* DebugUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugUtil.h; sourceTree = "<group>"; };
+		EDE7ED43268ADBCD00E0F437 /* xcodeproj_unifier */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcodeproj_unifier; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE7ED4A268ADC1F00E0F437 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EDE7ED4B268ADC1F00E0F437 /* XcodeProjUnifier.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = XcodeProjUnifier.hpp; sourceTree = "<group>"; };
+		EDE7ED4D268ADC1F00E0F437 /* namehash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = namehash.h; sourceTree = "<group>"; };
+		EDE7ED4E268ADC1F00E0F437 /* NeXTSTEP_plist.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NeXTSTEP_plist.hpp; sourceTree = "<group>"; };
+		EDE7ED4F268ADC1F00E0F437 /* pbxproj_parser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pbxproj_parser.hpp; sourceTree = "<group>"; };
+		EDE7ED50268ADC1F00E0F437 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		EDE7ED51268ADC1F00E0F437 /* pbxproj_parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pbxproj_parser.cpp; sourceTree = "<group>"; };
+		EDE7ED52268ADC1F00E0F437 /* namehash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = namehash.cpp; sourceTree = "<group>"; };
+		EDE7ED53268ADC1F00E0F437 /* NeXTSTEP_plist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NeXTSTEP_plist.cpp; sourceTree = "<group>"; };
+		EDE7ED54268ADC1F00E0F437 /* XcodeProjUnifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XcodeProjUnifier.cpp; sourceTree = "<group>"; };
+		EDE7ED55268ADC1F00E0F437 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
+		EDE7ED56268ADC1F00E0F437 /* UnifiedXcodeProject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UnifiedXcodeProject.hpp; sourceTree = "<group>"; };
+		EDE7ED57268ADC1F00E0F437 /* SXcodeSources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXcodeSources.h; sourceTree = "<group>"; };
+		EDE7ED58268ADC1F00E0F437 /* UnifiedXcodeProject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UnifiedXcodeProject.cpp; sourceTree = "<group>"; };
+		EDFBE13D268ADFA80049E1F1 /* StrBuf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StrBuf.h; sourceTree = "<group>"; };
+		EDFBE141268AE1D40049E1F1 /* SharedMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedMacros.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED3F496F202C538C000DA43A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE7ED40268ADBCD00E0F437 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED3F4969202C538C000DA43A = {
+			isa = PBXGroup;
+			children = (
+				ED96F21B208ED1DA0047E0D9 /* shared */,
+				ED3F4974202C538C000DA43A /* android_mk_unifier */,
+				EDE7ED44268ADBCD00E0F437 /* xcodeproj_unifier */,
+				ED3F4973202C538C000DA43A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED3F4973202C538C000DA43A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED3F4972202C538C000DA43A /* android_mk_unifier */,
+				EDE7ED43268ADBCD00E0F437 /* xcodeproj_unifier */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED3F4974202C538C000DA43A /* android_mk_unifier */ = {
+			isa = PBXGroup;
+			children = (
+				ED8783AF2045474A00F28FC9 /* nom */,
+				EDAA68B42043E23C0042A20D /* DebugUtil.h */,
+				ED3F4975202C538C000DA43A /* main.cpp */,
+				ED8783A92045164800F28FC9 /* Android.mk.cpp */,
+				ED8783AA2045164800F28FC9 /* Android.mk.h */,
+			);
+			path = android_mk_unifier;
+			sourceTree = "<group>";
+		};
+		ED8783AF2045474A00F28FC9 /* nom */ = {
+			isa = PBXGroup;
+			children = (
+				ED8783B02045475C00F28FC9 /* src */,
+			);
+			path = nom;
+			sourceTree = "<group>";
+		};
+		ED8783B02045475C00F28FC9 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				ED8783B1204547AC00F28FC9 /* error.hpp */,
+				ED8783B2204547AC00F28FC9 /* utils.hpp */,
+				ED8783AC2045474700F28FC9 /* lexer.cpp */,
+				ED8783AD2045474700F28FC9 /* lexer.hpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		ED96F21B208ED1DA0047E0D9 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				EDFBE140268AE15F0049E1F1 /* utils */,
+				ED96F21F208ED36B0047E0D9 /* file_utils.h */,
+				ED96F21C208ED1DA0047E0D9 /* SSources.cpp */,
+				ED96F21D208ED1DA0047E0D9 /* SSources.h */,
+				ED96F21E208ED35A0047E0D9 /* str_utils.h */,
+				EDFBE141268AE1D40049E1F1 /* SharedMacros.h */,
+			);
+			path = shared;
+			sourceTree = "<group>";
+		};
+		EDE7ED44268ADBCD00E0F437 /* xcodeproj_unifier */ = {
+			isa = PBXGroup;
+			children = (
+				EDE7ED4C268ADC1F00E0F437 /* xcodeproj */,
+				EDE7ED58268ADC1F00E0F437 /* UnifiedXcodeProject.cpp */,
+				EDE7ED56268ADC1F00E0F437 /* UnifiedXcodeProject.hpp */,
+				EDE7ED4A268ADC1F00E0F437 /* main.cpp */,
+				EDE7ED57268ADC1F00E0F437 /* SXcodeSources.h */,
+				EDE7ED55268ADC1F00E0F437 /* TODO.txt */,
+				EDE7ED54268ADC1F00E0F437 /* XcodeProjUnifier.cpp */,
+				EDE7ED4B268ADC1F00E0F437 /* XcodeProjUnifier.hpp */,
+			);
+			path = xcodeproj_unifier;
+			sourceTree = "<group>";
+		};
+		EDE7ED4C268ADC1F00E0F437 /* xcodeproj */ = {
+			isa = PBXGroup;
+			children = (
+				EDE7ED52268ADC1F00E0F437 /* namehash.cpp */,
+				EDE7ED4D268ADC1F00E0F437 /* namehash.h */,
+				EDE7ED53268ADC1F00E0F437 /* NeXTSTEP_plist.cpp */,
+				EDE7ED4E268ADC1F00E0F437 /* NeXTSTEP_plist.hpp */,
+				EDE7ED51268ADC1F00E0F437 /* pbxproj_parser.cpp */,
+				EDE7ED4F268ADC1F00E0F437 /* pbxproj_parser.hpp */,
+				EDE7ED50268ADC1F00E0F437 /* readme.md */,
+			);
+			path = xcodeproj;
+			sourceTree = "<group>";
+		};
+		EDFBE140268AE15F0049E1F1 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				ED67918420411C3A00E5C127 /* Path.h */,
+				EDFBE13D268ADFA80049E1F1 /* StrBuf.h */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED3F4971202C538C000DA43A /* android_mk_unifier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED3F4979202C538C000DA43A /* Build configuration list for PBXNativeTarget "android_mk_unifier" */;
+			buildPhases = (
+				ED3F496E202C538C000DA43A /* Sources */,
+				ED3F496F202C538C000DA43A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = android_mk_unifier;
+			productName = android_mk_unifier;
+			productReference = ED3F4972202C538C000DA43A /* android_mk_unifier */;
+			productType = "com.apple.product-type.tool";
+		};
+		EDE7ED42268ADBCD00E0F437 /* xcodeproj_unifier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDE7ED49268ADBCD00E0F437 /* Build configuration list for PBXNativeTarget "xcodeproj_unifier" */;
+			buildPhases = (
+				EDE7ED3F268ADBCD00E0F437 /* Sources */,
+				EDE7ED40268ADBCD00E0F437 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = xcodeproj_unifier;
+			productName = xcodeproj_unifier;
+			productReference = EDE7ED43268ADBCD00E0F437 /* xcodeproj_unifier */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED3F496A202C538C000DA43A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = bianchui;
+				TargetAttributes = {
+					ED3F4971202C538C000DA43A = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Manual;
+					};
+					EDE7ED42268ADBCD00E0F437 = {
+						CreatedOnToolsVersion = 11.3;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = ED3F496D202C538C000DA43A /* Build configuration list for PBXProject "CppBuildUnifier" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = ED3F4969202C538C000DA43A;
+			productRefGroup = ED3F4973202C538C000DA43A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED3F4971202C538C000DA43A /* android_mk_unifier */,
+				EDE7ED42268ADBCD00E0F437 /* xcodeproj_unifier */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED3F496E202C538C000DA43A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED96F220208EDAD00047E0D9 /* SSources.cpp in Sources */,
+				ED8783AB2045164800F28FC9 /* Android.mk.cpp in Sources */,
+				ED3F4976202C538C000DA43A /* main.cpp in Sources */,
+				ED8783AE2045474700F28FC9 /* lexer.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE7ED3F268ADBCD00E0F437 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE7ED5A268ADC1F00E0F437 /* pbxproj_parser.cpp in Sources */,
+				EDE7ED5E268ADC1F00E0F437 /* UnifiedXcodeProject.cpp in Sources */,
+				EDE7ED5C268ADC1F00E0F437 /* NeXTSTEP_plist.cpp in Sources */,
+				EDE7ED5D268ADC1F00E0F437 /* XcodeProjUnifier.cpp in Sources */,
+				EDE7ED5B268ADC1F00E0F437 /* namehash.cpp in Sources */,
+				EDE7ED59268ADC1F00E0F437 /* main.cpp in Sources */,
+				EDE7ED5F268ADD4000E0F437 /* SSources.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		ED3F4977202C538C000DA43A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		ED3F4978202C538C000DA43A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		ED3F497A202C538C000DA43A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_THREADSAFE_STATICS = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		ED3F497B202C538C000DA43A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_OPTIMIZATION_LEVEL = z;
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				GCC_THREADSAFE_STATICS = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		EDE7ED47268ADBCD00E0F437 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = "";
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_THREADSAFE_STATICS = NO;
+				GCC_WARN_SHADOW = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		EDE7ED48268ADBCD00E0F437 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_OPTIMIZATION_LEVEL = z;
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				GCC_THREADSAFE_STATICS = NO;
+				GCC_WARN_SHADOW = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED3F496D202C538C000DA43A /* Build configuration list for PBXProject "CppBuildUnifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED3F4977202C538C000DA43A /* Debug */,
+				ED3F4978202C538C000DA43A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED3F4979202C538C000DA43A /* Build configuration list for PBXNativeTarget "android_mk_unifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED3F497A202C538C000DA43A /* Debug */,
+				ED3F497B202C538C000DA43A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDE7ED49268ADBCD00E0F437 /* Build configuration list for PBXNativeTarget "xcodeproj_unifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE7ED47268ADBCD00E0F437 /* Debug */,
+				EDE7ED48268ADBCD00E0F437 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED3F496A202C538C000DA43A /* Project object */;
+}
