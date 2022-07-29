@@ -445,11 +445,21 @@ bool SSources::SUnifyUnit::commit() {
             stats.maxUnifyFiles = stats.maxUnifyFiles < files.size() ? (uint32_t)files.size() : stats.maxUnifyFiles;
             sources->ensureUnifiedDir();
             std::sort(files.begin(), files.end(), stricasecmp);
-            std::string unifiedPath = sources->_unified_Path;
-            unifiedPath.append(getClearFileName(unifiedRoot.c_str()));
-            unifiedPath.append(iter->first);
-            unifiedPath.push_back('.');
-            unifiedPath.append(iter->first);
+            std::string unifiedPath;
+            int retry = 0;
+            do {
+                unifiedPath = sources->_unified_Path;
+                unifiedPath.append(getClearFileName(unifiedRoot.c_str()));
+                unifiedPath.append(iter->first);
+                if (retry) {
+                    char buf[64];
+                    sprintf(buf, "_%d", retry);
+                    unifiedPath.append(buf);
+                }
+                unifiedPath.push_back('.');
+                unifiedPath.append(iter->first);
+                ++retry;
+            } while (contains(sources->_files, unifiedPath));
             std::ostringstream os;
             for (auto fi = files.begin(); fi != files.end(); ++fi) {
                 os << "#include \"" << sources->_unified_RelativeRoot << *fi << "\"\n";
