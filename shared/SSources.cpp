@@ -146,6 +146,10 @@ bool SSources::load(std::istream& is_list, std::string list_relative) {
                 case ':':
                     mergelist(line.c_str() + 1, list_relative);
                     break;
+                    
+                case '=':
+                    addFile(line.c_str() + 1);
+                    break;
 
                 case '*':
                 case '.':
