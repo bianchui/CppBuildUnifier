@@ -71,6 +71,11 @@ ELogLevel::Enum ELogLevel::FromString(const char* str) {
     return level;
 }
 
+template <typename T>
+bool contains(const std::vector<T>& vec, const T& item) {
+    return std::find(vec.begin(), vec.end(), item) != vec.end();
+}
+
 static void removeComment(std::string& str) {
     std::string::size_type it = str.find('#');
     if (it != std::string::npos) {
@@ -395,8 +400,10 @@ bool SSources::SUnifyUnit::add(const char* file) {
     std::vector<std::string>& files = extfiles[ext];
 
     LOG_D("Unified:%s\n", file);
-
-    files.push_back(file);
+    std::string sFile = file;
+    if (!contains(files, sFile)) {
+        files.push_back(std::move(sFile));
+    }
 
     return true;
 }
