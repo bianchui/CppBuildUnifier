@@ -84,6 +84,7 @@ private:
 struct SSources {
 protected:
     std::string _root;
+    std::vector<std::string> _alreadyProcessedFiles;
     std::vector<std::string> _files;
     std::vector<std::string> _exclude;
     std::set<std::string> _exts;

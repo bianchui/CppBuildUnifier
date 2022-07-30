@@ -319,6 +319,11 @@ bool SSources::addDir(SUnifyUnit& bu, const std::string& path, bool recursive) {
                 }
             }
             
+            if (_unified && contains(_alreadyProcessedFiles, subpath)) {
+                continue;
+            }
+            _alreadyProcessedFiles.push_back(subpath);
+
             success = _unified ? bu.add(subpath.c_str()) : addFile(subpath.c_str());
         }
         if (S_ISDIR(info.st_mode) && recursive) {
@@ -342,6 +347,7 @@ bool SSources::addFile(const char* path) {
     ++_stats.singleFiles;
 
     _files.push_back(path);
+    _alreadyProcessedFiles.push_back(path);
     return true;
 }
 
