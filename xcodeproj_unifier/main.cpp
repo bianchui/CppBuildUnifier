@@ -61,7 +61,7 @@ bool findProjects(const char* path, std::vector<std::string>& projects) {
 }
 
 void help(const char* cmd) {
-    printf("xcode project unifier, Copyright 2018-2022 bianchui@github.com .\n");
+    printf("xcode project unifier, v2022.0730, Copyright 2018-2022 bianchui@github.com .\n");
     printf("usage:\n%s [-no] [-project projname] [dir]\n", cmd);
     printf("  -no       disable unifier\n");
 }

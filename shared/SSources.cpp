@@ -83,6 +83,28 @@ static void removeComment(std::string& str) {
     }
 }
 
+static bool readListLine(std::istream& is, std::string& line) {
+    std::string subLine;
+    
+    line.clear();
+    bool anyLine = false;
+    while (std::getline(is, subLine)) {
+        anyLine = true;
+        bool continueLine = subLine.length() > 0 && subLine.back() == '\\';
+        if (continueLine) {
+            subLine.pop_back();
+        }
+        removeComment(subLine);
+        trim(subLine);
+        line += subLine;
+        if (!continueLine) {
+            break;
+        }
+    }
+    
+    return anyLine;
+}
+
 //SSources
 void SSources::addExt(const char* ext) {
     if (ext) {
@@ -139,9 +161,7 @@ bool SSources::load(std::istream& is_list, std::string list_relative) {
         return false;
     }
     std::string line;
-    while (std::getline(is_list, line)) {
-        removeComment(line);
-        trim(line);
+    while (readListLine(is_list, line)) {
         if (!line.empty()) {
             switch (line[0]) {
                 case '-':

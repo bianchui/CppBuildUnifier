@@ -81,7 +81,7 @@ bool SAndroidSources::makeAndroidMK() const {
 }
 
 void help(const char* cmd) {
-    printf("Android.mk unifier, v2020.1207, Copyright 2018-2022 bianchui@github.com .\n\n");
+    printf("Android.mk unifier, v2022.0730, Copyright 2018-2022 bianchui@github.com .\n\n");
     printf("usage:\n%s [-no] [dir]\n\n", cmd);
     printf("  -no       disable unifier\n");
 }
