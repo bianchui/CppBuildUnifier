@@ -76,6 +76,13 @@ bool XcodeProjUnifier::makeXcodeproj(const char* proj_path, const char* proj_nam
         if (!targetName) {
             return false;
         }
+        std::string targetName_ss(targetName);
+        if (targetName_ss.length() > 2) {
+            if (targetName_ss[0] == '"' && targetName_ss.back() == '"') {
+                targetName_ss = targetName_ss.substr(1, targetName_ss.length() - 2);
+            }
+            targetName = targetName_ss.c_str();
+        }
         srcs.setAllFiles(&allFiles);
         LOG_W_ONLY(printf("========== %s ==========\n", targetName));
         if (!srcs.loadList(proj_path, targetName)) {
