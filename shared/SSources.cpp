@@ -189,7 +189,7 @@ bool SSources::load(std::istream& is_list, std::string list_relative) {
                             addExt(to.c_str());
                             while (true) {
                                 std::string::size_type nexti = from.find(',', i);
-                                std::string ext = from.substr(i, nexti);
+                                std::string ext = from.substr(i, nexti == std::string::npos ? nexti : nexti - i);
                                 if (ext.length()) {
                                     addExt(ext.c_str());
                                     addExtMap(ext.c_str(), to.c_str());
