@@ -89,7 +89,7 @@ protected:
     std::vector<std::string> _exclude;
     std::set<std::string> _exts;
     // map<to, from[]>
-    std::map<std::string, std::set<std::string>> _extMap;
+    std::map<std::string, std::vector<std::string>> _extMap;
     const std::set<std::string> *_allFiles;
     bool _unified;
     bool _forceUnify;

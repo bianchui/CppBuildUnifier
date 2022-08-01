@@ -142,7 +142,9 @@ void SSources::addExtMap(const char* from, const char* to) {
         lowercase(to_);
         if (from_ != to_ && _extMap.find(from_) == _extMap.end()) {
             auto& item = _extMap[to_];
-            item.insert(from_);
+            if (!contains(item, from_)) {
+                item.push_back(from_);
+            }
         }
     }
 }
@@ -438,23 +440,34 @@ bool SSources::SUnifyUnit::commit() {
     if (sources->_extMap.size()) {
         for (auto toI = sources->_extMap.begin(); toI != sources->_extMap.end(); ++toI) {
             auto to = extfiles.find(toI->first);
-            size_t mergetExtCount = to != extfiles.end() ? 1 : 0;
-            std::vector<std::string> mergedFiles;
-            std::vector<std::string>& merged = to != extfiles.end() ? to->second : mergedFiles;
-            for (auto fromI = toI->second.begin(); fromI != toI->second.end(); ++fromI) {
+            auto fromI = toI->second.begin();
+            if (to == extfiles.end()) {
+                // find the first exist ext in map
+                for (; fromI != toI->second.end(); ++fromI) {
+                    to = extfiles.find(*fromI);
+                    if (to != extfiles.end()) {
+                        ++fromI;
+                        break;
+                    }
+                }
+            }
+            if (to == extfiles.end()) {
+                continue;
+            }
+            size_t mergedExtCount = 1;
+            std::vector<std::string>& merged = to->second;
+            std::string mergedLog = to->first + ":";
+            for (; fromI != toI->second.end(); ++fromI) {
                 auto from = extfiles.find(*fromI);
                 if (from != extfiles.end()) {
                     merged.insert(merged.end(), from->second.begin(), from->second.end());
-                    ++mergetExtCount;
+                    mergedLog += from->first + ",";
+                    extfiles.erase(from);
+                    ++mergedExtCount;
                 }
             }
-            if (mergetExtCount > 1) {
-                if (to == extfiles.end()) {
-                    std::swap(extfiles[toI->first], mergedFiles);
-                }
-                for (auto fromI = toI->second.begin(); fromI != toI->second.end(); ++fromI) {
-                    extfiles.erase(*fromI);
-                }
+            if (mergedExtCount > 1) {
+                LOG_I("Commit:merged:%s\n", mergedLog.c_str());
             }
         }
     }
