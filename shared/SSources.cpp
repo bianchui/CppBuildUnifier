@@ -376,10 +376,12 @@ bool SSources::addPath(const char* inPath, const std::string& relative) {
             std::string subFull = shared::Path(bu.unifiedRoot.c_str(), (sub[0] == '/' ? sub.c_str() + 1 : sub.c_str())).string();
             recursive = true;
             file = false;
-            if (subFull.length() > 0 && subFull.back() == '/') {
+            if ((subFull.length() > 0 && subFull.back() == '/') || (sub.length() == 1 && sub[0] == '/')) {
                 recursive = false;
             } else if (isDir(shared::Path(_root.c_str(), subFull.c_str()).c_str())) {
-                subFull.push_back('/');
+                if (subFull.length() != 0) {
+                    subFull.push_back('/');
+                }
             } else {
                 file = true;
             }
